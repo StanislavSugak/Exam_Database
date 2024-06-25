@@ -1,0 +1,121 @@
+body{
+    margin: 0 auto;
+    padding: 0;
+    background-color: #141218;
+}
+
+/*-----header-----*/
+header{
+    position: relative;
+    height: 50px;
+    background-color: #141218;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 80px;
+    gap: 80px;
+}
+
+header a{
+    text-decoration: none;
+}
+
+.back{
+    height: 20px;
+    width: 20px;
+    filter: invert(100%);
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    cursor: pointer;
+}
+
+/*-----header-----*/
+
+
+/*-----main-----*/
+main{
+    height: fit-content;
+    width: calc(100% - 60px);
+    padding: 30px;
+    background-color: #141218;
+    border-top: 5px solid #fff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+/*tag*/
+
+
+/*search*/
+.search{
+    width: 100%;
+    height: 70px;
+    margin: -10px 0 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+    max-width: 300px;
+    background-color: #141218;
+}
+
+.search input{
+    border: none;
+    outline: none;
+    width: 100%;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    padding: 10px;
+    background-color: #141218;
+}
+
+.search input::placeholder{
+    color: #fff;
+
+}
+/*search*/
+
+
+/*container text*/
+.container{
+    width: calc(100% - 30px);
+    height: fit-content;
+    border: 1px solid #fff;
+    margin: 10px 0;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    transition: all 1s;
+    padding: 15px;
+    max-width: 300px;
+    cursor: pointer;
+}
+
+.container:hover{
+    background-color: #ffffff8a;
+}
+
+.nothing-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 50px - 65px - 65px - 70px);
+    width: 100%;
+}
+
+.no_show{
+    display: none;
+}
+/*-----main-----*/
+
+
+/*-----footer-----*/
+footer{
+    height: fit-content;
+    width: calc(100% - 60px);
+    padding: 30px;
+    background-color: #141218;
+    border-top: 5px solid #fff;
+}
+/*-----footer-----*/

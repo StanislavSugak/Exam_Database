@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/basic.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/question.css">
+    <title>question_32</title>
+</head>
+<body>
+    <header>
+        <img src="../images/back.png" alt="fail" class="back">
+        <a href="../pages/home.html"><p class="text-Poppins20">Number</p></a>
+        <a href="../pages/homeABC.html"><p class="text-Poppins20">ABC</p></a>
+    </header>
+    <main>
+        <p class="text-Poppins13">Агенты репликации работают как часть службы SQL Server Agent. Поэтому для успешного выполнения копирования данных следует убедиться, что служба SQL Server Agent запущена. Рекомендуется установить автоматический запуск этой службы при запуске операционной системы.</p>
+        <p class="text-Poppins13">Помимо перечисленных агентов, при создании базы данных распределении создается <span>несколько вспомогательных автоматически запускаемых задач:</span></p>
+        <p class="text-Poppins13 list">– Agent checkup (отслеживает состояние и работоспособность агентов репликации);</p>
+        <p class="text-Poppins13 list">– Transaction cleanup (отвечает за удаление устаревших транзакций из системной базы данных распределения);</p>
+        <p class="text-Poppins13 list">– History cleanup (отвечает за удаление устаревших записей из системных таблиц истории репликации);</p>
+        <p class="text-Poppins13 list">– Subscription cleanup at the Publisher (отвечает за удаление устаревших подписок на публикации в публикующей базе данных);</p>
+        <p class="text-Poppins13 list">– History cleanup at the Distributor (отвечает за удаление устаревших записей из системных таблиц истории репликации в базе данных распределения).</p>
+        <p class="text-Poppins13">Эти задачи помогают репликации эффективно функционировать долгое время. Задачи очистки (cleanup task) удаляют из базы данных Distribution устаревшие строки, тем самым предохраняя ее от переполнения. Кроме того, эти задачи удаляют с диска файлы моментальных снимков (snapshot) и сценариев после того, как все подписчики получат нужные данные.</p>
+        <p class="text-Poppins13">Вспомогательные задачи работают в фоновом режиме и не требуют администрирования.</p>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+<script src="../js/back.js"></script>
+</html>

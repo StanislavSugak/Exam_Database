@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/basic.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/question.css">
+    <title>question_23</title>
+</head>
+<body>
+    <header>
+        <img src="../images/back.png" alt="fail" class="back">
+        <a href="../pages/home.html"><p class="text-Poppins20">Number</p></a>
+        <a href="../pages/homeABC.html"><p class="text-Poppins20">ABC</p></a>
+    </header>
+    <main>
+        <p class="text-Poppins13">Явные транзакции требуют, чтобы пользователь явно указал начало и конец транзакции, используя команды Transact-SQL.</p>
+        <pre class="code">BEGIN TRANSACTION [transaction_name | @tran_name_variable]</pre>
+        <p class="text-Poppins13">– BEGIN TRANSACTION. Эта команда определяет начало транзакции;</p>
+        <p class="text-Poppins13">– transaction_name используется для указания имени транзакции. Имя транзакции обычно используется только для вложенных транзакций последнего уровня</p>
+        <p class="text-Poppins13">– @tran_name_variablе задает имя переменной типа char, varchar, nchar или nvarchar, в которой хранится имя транзакции. Использование переменной для указания имени транзакции позволяет нескольким пользователям создавать множество транзакций, используя один и тот же код (например, хранимую процедуру).</p>
+        <pre class="code">COMMIT [TRANSACTION] [transaction_name | @tran_name_variable]</pre>
+        <p class="text-Poppins13">COMMIT TRANSACTION или COMMIT WORK. Эта команда определяет конец транзакции. Если в теле транзакции не было ошибок, то эта команда предписывает серверу зафиксировать все изменения, сделанные в транзакции, после чего в журнале транзакции помечается, что изменения зафиксированы и транзакция завершена.</p>
+        <p class="text-Poppins13">ROLLBACK TRANSACTION или ROLLBACK WORK. Эта команда используется, если пользователю необходимо прервать транзакцию, например, при выполнении определенного логического условия. Происходит откат транзакции, восстанавливается первоначальное состояние системы и в журнале транзакции отмечается, что транзакция была отменена.</p>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+<script src="../js/back.js"></script>
+</html>

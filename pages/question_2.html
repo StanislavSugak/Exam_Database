@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/basic.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/question.css">
+    <title>question_2</title>
+</head>
+<body>
+    <header>
+        <img src="../images/back.png" alt="fail" class="back">
+        <a href="../pages/home.html"><p class="text-Poppins20">Number</p></a>
+        <a href="../pages/homeABC.html"><p class="text-Poppins20">ABC</p></a>
+    </header>
+    <main>
+        <p class="text-Poppins13">Специально для триггеров T-SQL определяет две виртуальные таблицы, структура которой идентична таблице, с которой связан триггер. Для DELETE – deleted, куда помещаются удаленные данные. Для INSERT inserted. Для UPDATE в таблицу deleted помещаются старые строки, а в таблицу inserted новые. К этим таблицам можно обращаться внутри тела триггера, как и с обычными таблицами. </p>
+        <p class="text-Poppins13">Можно указать, когда вызывает триггер AFTER, BEFORE или FOR each ROW. Также есть замещающий триггер, которые INSTEAD OF, который замещает определенное действие. </p>
+        <p class="text-Poppins13">Отключения – DISABLE, включения – ENABLE или удаление DROP.</p>
+        <p class="text-Poppins13">Триггер AFTER – несколько триггеров на одно действие (UPDATE, DELETE или INSERT). Триггер INSTEAD OF – один триггер на одно действие (UPDATE, DELETE или INSERT) и нельзя определять для таблиц, на которые распространяются каскадные ограничения ссылочной целостности.</p>
+        <pre class="code">  //Запрет на удаление из талицы
+            
+    CREATE TRIGGER trigger_name
+    ON table_name
+    FOR INSERT, UPDATE, DELETE AS
+    IF (CONDITION)
+    BEGIN
+        ROLLBACK TRANSACTION;
+        PRINT 'Изменения отменены триггером';
+    END</pre>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+<script src="../js/back.js"></script>
+</html>

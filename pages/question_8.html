@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/basic.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/question.css">
+    <title>question_8</title>
+</head>
+<body>
+    <header>
+        <img src="../images/back.png" alt="fail" class="back">
+        <a href="../pages/home.html"><p class="text-Poppins20">Number</p></a>
+        <a href="../pages/homeABC.html"><p class="text-Poppins20">ABC</p></a>
+    </header>
+    <main>
+        <p class="text-Poppins13"><span>Поиск по ключу</span> – это запрос, в котором мы ищем записи, соответствующие точному значению ключа. (WHERE с точным значением)</p>
+        <p class="text-Poppins13"><span>Приближенный поиск</span> – это поиск записей, значения ключей которых находятся в заданном диапазоне. (BEETWEN между)</p>
+        <p class="text-Poppins13 glav"><span>В SQL существуют различные команды для поиска записей в таблице</span></p>
+        <p class="text-Poppins13"><span>SELECT:</span> используется для извлечения данных из базы данных.</p>
+        <p class="text-Poppins13 list code">SELECT * FROM table_name;</p>
+        <p class="text-Poppins13 list">Этот запрос вернет все записи из table_name.</p>
+        <p class="text-Poppins13"><span>WHERE:</span> используется для фильтрации записей, которые удовлетворяют определенному условию.</p>
+        <p class="text-Poppins13 list code">SELECT * FROM table_name WHERE column_name = 'value';</p>
+        <p class="text-Poppins13 list">Этот запрос вернет все записи из table_name, где column_name равно 'value'.</p>
+        <p class="text-Poppins13"><span>LIKE:</span> используется для поиска шаблонов. Символ % используется как заменитель любого числа символов, а символ _ заменяет один символ.</p>
+        <p class="text-Poppins13 list code">SELECT * FROM table_name WHERE column_name LIKE 'value%';</p>
+        <p class="text-Poppins13 list">Этот запрос вернет все записи из table_name, где column_name начинается с 'value'.</p>
+        <p class="text-Poppins13"><span>IN:</span> этот оператор позволяет указать несколько значений в операторе WHERE.</p>
+        <p class="text-Poppins13 list code">SELECT * FROM table_name WHERE column_name IN ('value1', 'value2');</p>
+        <p class="text-Poppins13 list">Этот запрос вернет все записи из table_name, где column_name равно 'value1' или 'value2'.</p>
+        <p class="text-Poppins13"><span>BETWEEN:</span> этот оператор выбирает значения в пределах диапазона. Значения могут быть числами, текстом или датами.</p>
+        <p class="text-Poppins13 list code">SELECT * FROM table_name WHERE column_name BETWEEN 'value1' AND 'value2';</p>
+        <p class="text-Poppins13 list">Этот запрос вернет все записи из table_name, где column_name находится между 'value1' и 'value2'.</p>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+<script src="../js/back.js"></script>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/basic.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/question.css">
+    <title>question_13</title>
+</head>
+<body>
+    <header>
+        <img src="../images/back.png" alt="fail" class="back">
+        <a href="../pages/home.html"><p class="text-Poppins20">Number</p></a>
+        <a href="../pages/homeABC.html"><p class="text-Poppins20">ABC</p></a>
+    </header>
+    <main>
+        <p class="text-Poppins13"><span>Транзакция</span> – это набор связанных задач, который, помимо всего прочего, завершается успешно (фиксация) или с ошибкой (отмена) как единое целое. </p>
+        <p class="text-Poppins13"><span>Распределенная транзакция</span> — это транзакция, затрагивающая несколько ресурсов. Для фиксации распределенной транзакции все участники должны гарантировать, что любое изменение данных будет постоянным. Изменения должны сохраняться даже в случае фатального сбоя системы или других непредвиденных событий. Если хоть один из участников не сможет предоставить такую гарантию, вся транзакция завершится с ошибкой и будет выполнен откат любых изменений данных внутри области транзакции.</p>
+        <pre class="code">BEGIN TRANSACTION;
+UPDATE Account1 SET Balance = Balance - 100
+    WHERE AccountID = 1;
+UPDATE Account2 SET Balance = Balance + 100
+    WHERE AccountID = 2;
+COMMIT;</pre>
+        <p class="text-Poppins13">Средства переводятся от Account1 к Account2. Если какая-либо часть операции не выполняется успешно, все изменения откатываются с помощью команды ROLLBACK.</p>
+        <p class="text-Poppins13 glav"><span>Основные характеристики распределенных транзакций</span></p>
+        <p class="text-Poppins13 list">• Атомарность: транзакция должна быть выполнена целиком или вовсе не выполняться. Если действие не может быть выполнено – тогда отмена.</p>
+        <p class="text-Poppins13 list">• Согласованность: после завершения транзакции все данные должны быть в согласованном состоянии. </p>
+        <p class="text-Poppins13 list">• Изолированность: каждая транзакция должна выполняться так, как будто она единственная операция, происходящая в системе. Это означает, что транзакции не должны влиять друг на друга.</p>
+        <p class="text-Poppins13 list">• Долговечность: как только транзакция завершена, ее результаты должны быть постоянными и неизменными, даже в случае сбоя системы.</p>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+<script src="../js/back.js"></script>
+</html>

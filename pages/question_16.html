@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/basic.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/question.css">
+    <title>question_16</title>
+</head>
+<body>
+    <header>
+        <img src="../images/back.png" alt="fail" class="back">
+        <a href="../pages/home.html"><p class="text-Poppins20">Number</p></a>
+        <a href="../pages/homeABC.html"><p class="text-Poppins20">ABC</p></a>
+    </header>
+    <main>
+        <p class="text-Poppins13"><span>Модель безопасности SQL Server – состоит из трех разных категорий, которые взаимодействуют друг с другом:</span></p>
+        <p class="text-Poppins13 list">1. Принципалы – субъекты, которые в SQL Server имеют разрешение на доступ к определенной сущности.</p>
+        <p class="text-Poppins13 list">2. Защищаемые объекты. Ресурсы, доступ к которым регулируется системой авторизации базы данных.</p>
+        <p class="text-Poppins13 list">3. Разрешения. Каждый защищаемый объект имеет связанные с ним разрешения, которые могут быть предоставлены принципалу.</p>
+        <p class="text-Poppins13"><span>Компонент Database Engine может работать в одном из следующих режимов аутентификации:</span></p>
+        <p class="text-Poppins13">1&#41; режим аутентификации Windows (Windows Authentication mode). В этом режиме SQL Server полностью доверяет операционной системе при аутентификации пользователей;</p>
+        <p class="text-Poppins13">2&#41; в смешанном режиме – режим аутентификации SQL Server и Windows – SQL Server and Windows Authentication mode. В этом режиме системы аутентификации Windows и SQL Server существуют независимо друг от друга.</p>
+        <p class="text-Poppins13"><span>Разрешения для объектов.</span></p>
+        <p class="text-Poppins13">Работа с данными и выполнение хранимых процедур требуют наличия класса доступа, называемого разрешениями для объектов. </p>
+        <p class="text-Poppins13"><span>Для различных объектов применяются разные наборы разрешений:</span></p>
+        <p class="text-Poppins13 list">– SELECT, INSERT, UPDATE и DELETE – эти разрешения могут быть применены для таблицы или представления;</p>
+        <p class="text-Poppins13 list">– SELECT и UPDATE – эти разрешения могут быть применены к конкретной колонке таблицы или представления;</p>
+        <p class="text-Poppins13 list">– INSERT и DELETE – эти разрешения применяются для таблицы или представления;</p>
+        <p class="text-Poppins13 list">– EXECUTE – это разрешение применяется только к хранимым процедурам.</p>
+        <p class="text-Poppins13">Разрешения для команд T-SQL.</p>
+        <p class="text-Poppins13">Этот класс разрешений контролирует возможность создания объектов в базе данных, создания самой базы данных и выполнения процедуры резервного копирования. Например, если пользователю необходимо создать представление, администратор базы данных должен предоставить пользователю право на выполнение команды CREATE VIEW (TABLE, RULE, DATABASE) или BACKUP DATABASE(LOG)/</p>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+<script src="../js/back.js"></script>
+</html>

@@ -1,0 +1,29 @@
+main{
+    align-items: start;
+}
+
+main p{
+    padding: 5px 0;
+}
+
+p.list{
+    padding-top: 0;
+    line-height: 16px;
+}
+
+p.glav{
+    margin: 0 auto;
+}
+
+span{
+    color: #cc23c4;
+}
+
+.code{
+    color:#24f18b;
+    font-size: 12px;
+}
+
+.text-Poppins13::first-letter{
+    margin-left: 30px;
+}
