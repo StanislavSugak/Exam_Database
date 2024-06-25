@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/basic.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/question.css">
+    <title>question_17</title>
+</head>
+<body>
+    <header>
+        <img src="../images/back.png" alt="fail" class="back">
+        <a href="../pages/home.html"><p class="text-Poppins20">Number</p></a>
+        <a href="../pages/homeABC.html"><p class="text-Poppins20">ABC</p></a>
+    </header>
+    <main>
+        <p class="text-Poppins13">Когда пользователи подключаются к SQL-сервер, действия, которые они могут выполнять, определяются правами, выданными их учетной записи, группе или роли, в которой они состоят. Для выполнения тех или иных действий пользователь должен иметь соответствующие права.</p>
+        <p class="text-Poppins13"><span>Права в SQL-сервер можно разделить на 3 категории:</span></p>
+        <p class="text-Poppins13">•	Разрешение для объектов.</p>
+        <p class="text-Poppins13">Разрешение для объектов контролирует возможность выполнения команд Select, Insert, Update и Delete для таблицы представлений. Действия с хранимыми процедурами предоставлением или запрещением команды EXECUTE.</p>
+        <p class="text-Poppins13">•	Разрешение для команд Transact SQL.</p>
+        <p class="text-Poppins13">Этот класс разрешений контролирует возможность создания объекта в БД, а также создание самой БД и выполнение процедур резервного копирования (Create view, create table и т.д.).</p>
+        <p class="text-Poppins13">•	Неявное разрешение.</p>
+        <p class="text-Poppins13">Этот класс разрешений контролирует действия, которые могут быть выполнены только членами ролей сервера или владельцами объектов в БД. Неявные разрешения не предоставляются пользователям напрямую, он получает их только при определенных обстоятельствах. Например, пользователь может стать владельцем объекта БД, только если он сам создаст этот объект, либо если другой владелец объекта передаст ему права владения своим объектом. </p>
+        <p class="text-Poppins13 glav"><span>GRANT (Выдача прав)</span></p>
+        <p class="text-Poppins13">Выдача прав на таблицы:</p>
+        <pre class="code">GRANT CRUD ON schema.table_name TO role_name;</pre>
+        <p class="text-Poppins13">Выдача прав на представления (views):</p>
+        <pre class="code">GRANT SELECT ON schema.view_name TO role_name;</pre>
+        <p class="text-Poppins13">Выдача прав на хранимые процедуры и функции:</p>
+        <pre class="code">GRANT EXECUTE ON PROCEDURE schema.proc_name TO role_name;</pre>
+        <p class="text-Poppins13 glav"><span>DENY (Запрет прав)</span></p>
+        <p class="text-Poppins13">Запрет прав на таблицы:</p>
+        <pre class="code">DENY CRUD ON schema.table_name TO role_name;</pre>
+        <p class="text-Poppins13">Запрет прав на представления (views):</p>
+        <pre class="code">DENY EXECUTE ON schema.view_name TO role_name;</pre>
+        <p class="text-Poppins13">Запрет прав на хранимые процедуры и функции:</p>
+        <pre class="code">DENY EXECUTE ON PROCEDURE schema.proc_name TO role_name;</pre>
+        <p class="text-Poppins13 glav"><span>REVOKE (Отзыв прав)</span></p>
+        <p class="text-Poppins13">Отзыв прав на таблицы:</p>
+        <pre class="code">REVOKE CRUD ON schema.table_name FROM role_name;</pre>
+        <p class="text-Poppins13">Отзыв прав на представления (views):</p>
+        <pre class="code">REVOKE EXECUTE ON schema.view_name FROM role_name;</pre>
+        <p class="text-Poppins13">Отзыв прав на хранимые процедуры и функции:</p>
+        <pre class="code">REVOKE EXECUTE ON PROCEDURE schema.proc_name FROM role_name;</pre>
+        <p class="text-Poppins13">•	GRANT явным образом предоставляет одно или несколько разрешений.</p>
+        <p class="text-Poppins13">•	DENY. Вместо того, чтобы убирать разрешения на доступ, можно создать роль, которой будет запрещен доступ к этой таблице, и включать пользователей в эту роль. Использование параметра CASCADE позволяет отзывать права не только у данного пользователя, но также и у всех тек пользователей, кому он предоставил данные права</p>
+        <p class="text-Poppins13">•	REVOKE удаляет существующие разрешения GRANT или DENY.</p>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+<script src="../js/back.js"></script>
+</html>

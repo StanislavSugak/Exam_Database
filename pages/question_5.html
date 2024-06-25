@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/basic.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/question.css">
+    <title>question_5</title>
+</head>
+<body>
+    <header>
+        <img src="../images/back.png" alt="fail" class="back">
+        <a href="../pages/home.html"><p class="text-Poppins20">Number</p></a>
+        <a href="../pages/homeABC.html"><p class="text-Poppins20">ABC</p></a>
+    </header>
+    <main>
+        <p class="text-Poppins13 "><span>// обновление данных в таблице</span></p>
+        <p class="text-Poppins13">DECLARE @product_id INT, @product_name VARCHAR(50) //объявление переменных для условия</p>
+        <p class="text-Poppins13">DECLARE product_cursor CURSOR FOR</p>
+        <p class="text-Poppins13">SELECT column1, column2 FROM table</p>
+        <p class="text-Poppins13">OPEN product_cursor</p>
+        <p class="text-Poppins13">FETCH NEXT FROM product_cursor INTO @product_id, @product_name</p>
+        <p class="text-Poppins13">WHILE @@FETCH_STATUS = 0</p>
+        <p class="text-Poppins13">BEGIN</p>
+        <p class="text-Poppins13">-- Обновление данных</p>
+        <p class="text-Poppins13">UPDATE products</p>
+        <p class="text-Poppins13">SET column1= 'New Name'</p>
+        <p class="text-Poppins13">WHERE column2 = @product_id</p>
+        <p class="text-Poppins13">FETCH NEXT FROM product_cursor INTO @product_id, @product_name</p>
+        <p class="text-Poppins13">END</p>
+        <p class="text-Poppins13">CLOSE product_cursor //закрытие курсора</p>
+        <p class="text-Poppins13">DEALLOCATE product_cursor //освобождение памяти</p>
+        <p class="text-Poppins13"><span>// удаление данных в таблице</span></p>
+        <p class="text-Poppins13">DECLARE @product_id INT, @product_name VARCHAR(50)</p>
+        <p class="text-Poppins13">DECLARE product_cursor CURSOR FOR</p>
+        <p class="text-Poppins13">SELECT id, name FROM products</p>
+        <p class="text-Poppins13">OPEN product_cursor</p>
+        <p class="text-Poppins13">FETCH NEXT FROM product_cursor INTO @product_id, @product_name</p>
+        <p class="text-Poppins13">WHILE @@FETCH_STATUS = 0</p>
+        <p class="text-Poppins13">BEGIN</p>
+        <p class="text-Poppins13">-- Удаление данных</p>
+        <p class="text-Poppins13">DELETE FROM products</p>
+        <p class="text-Poppins13">WHERE id = @product_id</p>
+        <p class="text-Poppins13">FETCH NEXT FROM product_cursor INTO @product_id, @product_name</p>
+        <p class="text-Poppins13">END</p>
+        <p class="text-Poppins13">CLOSE product_cursor</p>
+        <p class="text-Poppins13">DEALLOCATE product_cursor</p>
+        <p class="text-Poppins13">Закрытие курсора освобождает ресурсы, занятые им, но сохраняет его определение. Это позволяет повторно использовать курсор в дальнейшем.</p>
+        <p class="text-Poppins13">Удаление курсора освобождает все ресурсы, занятые им, и удаляет его определение. После этого курсор больше не может быть использован.</p>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+<script src="../js/back.js"></script>
+</html>

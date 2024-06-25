@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/basic.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/question.css">
+    <title>question_21</title>
+</head>
+<body>
+    <header>
+        <img src="../images/back.png" alt="fail" class="back">
+        <a href="../pages/home.html"><p class="text-Poppins20">Number</p></a>
+        <a href="../pages/homeABC.html"><p class="text-Poppins20">ABC</p></a>
+    </header>
+    <main>
+        <p class="text-Poppins13">Предоставление прав доступа к объектам базы данных производится при помощи инструкции GRANT. Эта инструкция имеет сложную структуру, зависимую от применяемого контекста. Рассмотрим особенности изменения прав доступа к объектам базы данных, с которыми разработчик наиболее часто сталкивается при типовом проектировании приложений, а именно: функция, имя входа, роль, схема, хранимая процедура, синоним, таблица, тип, пользователь, представление.</p>
+        <p class="text-Poppins13">Разрешений по доступу к объекту базы; их перечень, в зависимости от вида разрешаемого объекта</p>
+        <p class="text-Poppins13 code">Объект базы данных, к которому предоставляется доступ / Виды разрешаемых действий</p>
+        <p class="text-Poppins13">База данных: BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE, CREATE VIEW</p>
+        <p class="text-Poppins13">Таблица базы данных: DELETE, INSERT, REFERENCES, SELECT, UPDATE</p>
+        <p class="text-Poppins13">Просмотр (представление) VIEW: DELETE, INSERT, REFERENCES, SELECT и UPDATE</p>
+        <p class="text-Poppins13">Процедура: EXECUTE</p>
+        <p class="text-Poppins13">Функция скалярная: EXECUTE, REFERENCES</p>
+        <p class="text-Poppins13">Функция табличная: DELETE, INSERT, REFERENCES, SELECT, UPDATE</p>
+        <pre class="code">GRANT CREATE DATABASE, CREATE FUNCTION, CREATE PROCEDURE, CREATE TABLE, CREATE VIEW TO user1;
+    (GRANT BACKUP DATABASE, BACKUP LOG TO user1;)</pre>
+    <pre class="code">GRANT DELETE, INSERT, REFERENCES, SELECT, UPDATE
+    ON schema.table_name
+    TO role_name; (также для нижних)</pre>
+        <p class="text-Poppins13">Разрешение – имя разрешения на выполнения действия над объектом базы (ALTER¸ CONTROL, CREATE, DELETE, EXECUTE, INSERT, REFERENCES, SELECT,  UPDATE)</p>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+<script src="../js/back.js"></script>
+</html>

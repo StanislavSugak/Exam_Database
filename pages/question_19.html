@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/basic.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/question.css">
+    <title>question_19</title>
+</head>
+<body>
+    <header>
+        <img src="../images/back.png" alt="fail" class="back">
+        <a href="../pages/home.html"><p class="text-Poppins20">Number</p></a>
+        <a href="../pages/homeABC.html"><p class="text-Poppins20">ABC</p></a>
+    </header>
+    <main>
+        <p class="text-Poppins13"><span>Создание имени входа (LOGIN):</span></p>
+        <pre class="code">CREATE LOGIN [login_name]
+    WITH PASSWORD = 'strong_password'</pre>
+        <p class="text-Poppins13"><span>Создание пользователя базы данных (USER):</span></p>
+        <pre class="code">CREATE USER [user_name] FOR LOGIN [login_name]</pre>
+        <p class="text-Poppins13"><span>Добавления пользователя в пользовательскую роль:</span></p>
+        <pre class="code">CREATE ROLE [role_name]
+GO
+ALTER ROLE [role_name] ADD MEMBER [user_name]</pre>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+<script src="../js/back.js"></script>
+</html>

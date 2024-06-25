@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/basic.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/question.css">
+    <title>question_4</title>
+</head>
+<body>
+    <header>
+        <img src="../images/back.png" alt="fail" class="back">
+        <a href="../pages/home.html"><p class="text-Poppins20">Number</p></a>
+        <a href="../pages/homeABC.html"><p class="text-Poppins20">ABC</p></a>
+    </header>
+    <main>
+        <p class="text-Poppins13 code">DECLARE @MyVariable VARCHAR(50) //создание переменных для курсора</p>
+        <p class="text-Poppins13 code">DECLARE MyCursor CURSOR FOR  //создание курсора</p>
+        <p class="text-Poppins13">SELECT MyColumn </p>
+        <p class="text-Poppins13">FROM MyTable </p>
+        <p class="text-Poppins13 code">OPEN MyCursor   //открытие курсора</p>
+        <p class="text-Poppins13 code">FETCH NEXT FROM MyCursor INTO @MyVariable   //считывание данных из курсора в переменную</p>
+        <p class="text-Poppins13 list code">- PRIOR // предыдущая</p>
+        <p class="text-Poppins13 list code">- FIRST // на первую</p>
+        <p class="text-Poppins13 list code">- LAST // на последнюю</p>
+        <p class="text-Poppins13 list code">- ABSOLUTE n //строка, которая является n-ой в курсоре</p>
+        <p class="text-Poppins13 list code">- RELATIVE n //строка, которая строит на n от текущей</p>
+        <p class="text-Poppins13 code">WHILE @@FETCH_STATUS = 0 //все успешно, курсор переместился на новую строку</p>
+        <p class="text-Poppins13 list code">1 //последняя операция не удалась, так как нету строк для извлечения</p>
+        <p class="text-Poppins13 list code">-1 //произошла ошибка при выполнении FETCH </p>
+        <p class="text-Poppins13 list code">-2 //курсор был закрыт или освобожден</p>
+        <p class="text-Poppins13">BEGIN</p>
+        <p class="text-Poppins13">PRINT @MyVariable</p>
+        <p class="text-Poppins13">FETCH NEXT FROM MyCursor INTO @MyVariable   </p>
+        <p class="text-Poppins13">END </p>
+        <p class="text-Poppins13 code">CLOSE MyCursor //закрытие курсора </p>
+        <p class="text-Poppins13 code">DEALLOCATE MyCursor //освобождение памяти</p>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+<script src="../js/back.js"></script>
+</html>

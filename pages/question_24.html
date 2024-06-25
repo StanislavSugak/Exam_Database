@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/basic.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/question.css">
+    <title>question_24</title>
+</head>
+<body>
+    <header>
+        <img src="../images/back.png" alt="fail" class="back">
+        <a href="../pages/home.html"><p class="text-Poppins20">Number</p></a>
+        <a href="../pages/homeABC.html"><p class="text-Poppins20">ABC</p></a>
+    </header>
+    <main>
+        <p class="text-Poppins13">При работе в режиме неявного (или подразумевающегося) начала транзакции SQL Server автоматически начинает новую транзакцию, как только завершена предыдущая. Пользователь ничего не должен делать, чтобы указать начало транзакции. Транзакция продолжается до тех пор, пока пользователь явно не укажет команду отката (ROLLBACK TRANSACTION) или конца (COMMIT TRANSACTION) транзакции, после чего сервер автоматически начинает новую транзакцию. В итоге генерируется непрерывная цепь транзакций.</p>
+        <p class="text-Poppins13">После того как для соединения установлен режим подразумевающегося начала транзакции, сервер автоматически заканчивает текущую транзакцию и начинает новую, если встречается одна из следующих команд:</p>
+        <p class="text-Poppins13 code">ALTER TABLE – изменение структуры таблицы; CREATE; DELETE; DROP; FETCH; GRANT; INSERT; OPEN; REVOKE; SELECT – выборка данных из таблиц; TRUNCATE TABLE - усечение таблицы; UPDATE.</p>
+        <p class="text-Poppins13">Для установки режима автоматического определения транзакций используется следующая команда Transact-SQL:</p>
+        <pre class="code">SET IMPLIСIT _TRANSACTION ON</pre>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+<script src="../js/back.js"></script>
+</html>

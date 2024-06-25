@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/basic.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/question.css">
+    <title>question_26</title>
+</head>
+<body>
+    <header>
+        <img src="../images/back.png" alt="fail" class="back">
+        <a href="../pages/home.html"><p class="text-Poppins20">Number</p></a>
+        <a href="../pages/homeABC.html"><p class="text-Poppins20">ABC</p></a>
+    </header>
+    <main>
+        <p class="text-Poppins13"><span>BEGIN TRAN</span> или <span>BEGIN TRANSACTION</span> команда используется для начала новой транзакции.</p>
+        <p class="text-Poppins13"><span>COMMIT</span> команда используется для подтверждения транзакции, что означает, что все изменения, сделанные в рамках транзакции, становятся постоянными.</p>
+        <p class="text-Poppins13"><span>ROLLBACK</span> команда отменяет транзакцию, что означает, что все изменения, сделанные в рамках транзакции, отменяются, и база данных возвращается к состоянию, которое было до начала транзакции.</p>
+        <p class="text-Poppins13"><span>SAVE TRANSACTION</span> команда создает точку сохранения в транзакции, которую можно использовать для отката части транзакции.</p>
+        <p class="text-Poppins13"><span>@@TRANCOUNT</span> переменная, хранящая количество открытых транзакций.</p>
+        <p class="text-Poppins13"><span>TRY-CATCH</span> обработка исключений.</p>
+        <p class="text-Poppins13"><span>XACT_STATE()</span> возвращает состояние текущей транзакции:</p>
+        <p class="text-Poppins13 list">1 - Транзакция активна и может быть фиксирована</p>
+        <p class="text-Poppins13 list">-1 - Транзакция недействительна и, может быть, только отменена</p>
+        <p class="text-Poppins13 list">0 - Вне транзакции</p>
+        <p class="text-Poppins13"><span>CONTEXT_INFO()</span> позволяет сохранять и получать пользовательскую информацию в контексте транзакции.</p>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+<script src="../js/back.js"></script>
+</html>
